@@ -8,6 +8,20 @@
 
 <body>
     Hello World!
+    <script src="js/libs/seajs/sea.js"></script>
+    <script type="text/javascript">
+    // seajs config
+    seajs.config({
+        base: "./js/",
+        alias: {
+            "jquery": "libs/jquery/jquery-1.11.2.min.js"
+        }
+    });
+
+    seajs.use("main", function(app) {
+        app.run();
+    });
+    </script>
 </body>
 
 </html>
