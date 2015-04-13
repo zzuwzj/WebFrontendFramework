@@ -20,13 +20,14 @@ module.exports = function (grunt) {
           extDot: 'first' // Extensions in filenames begin after the first dot
         }, ],
       },
-    }，
+    },
     jshint: {
-      files: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
+      files: ['Gruntfile.js', 'src/js/**/*.js', 'test/**/*.js'],
       options: {
         globals: {
           jQuery: true
-        }
+        },
+        reporterOutput: 'build/jshint.log'
       }
     },
     watch: {
@@ -38,7 +39,10 @@ module.exports = function (grunt) {
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
+  // Load jshint
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+
   // Default task(s).
-  grunt.registerTask('default', ['uglify']);
+  grunt.registerTask('default', ['uglify', 'jshint']);
 
 };
