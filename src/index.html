@@ -3,11 +3,30 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/star_red_32x32.ico">
+    <title>Web Frontend Framework developed by Wang, Zhenjun</title>
+    <style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    body {
+        background-image: -moz-linear-gradient(top, #ffffff, #def5ff);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#def5ff));
+        background-image: -webkit-linear-gradient(top, #ffffff, #def5ff);
+        background-image: -o-linear-gradient(top, #ffffff, #def5ff);
+        background-image: linear-gradient(to bottom, #ffffff, #def5ff);
+    }
+    </style>
 </head>
 
 <body>
-    Hello World!
+    <div id="view-main" class="wff-view-container"></div>
     <script src="js/libs/seajs/sea.js"></script>
     <script type="text/javascript">
     // seajs config
